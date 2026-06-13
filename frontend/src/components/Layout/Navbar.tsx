@@ -63,7 +63,7 @@ export const Navbar: React.FC = () => {
               className="flex items-center group active:opacity-70 transition-opacity"
             >
               <img
-                src="../../../public/logo.png"
+                src="./logo.png"
                 alt="HobbyRoadmap"
                 className="max-h-10"
               />

@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2 text-center md:text-left">
             <Link to="/" className="inline-flex items-center space-x-2 mb-4">
               <img
-                src="../../../public/logo.png"
+                src="./logo.png"
                 alt="HobbyRoadmap"
                 className="max-h-10"
               />

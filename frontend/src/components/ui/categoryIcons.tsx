@@ -1,0 +1,71 @@
+import {
+  BookOpen,
+  Music,
+  Camera,
+  Palette,
+  Dumbbell,
+  Utensils,
+  Code,
+  Gamepad2,
+  Flower2,
+  Plane,
+  PenTool,
+  Mic,
+  Shirt,
+  Bike,
+  Heart,
+  Hammer,
+  Brush,
+  Guitar,
+  CookingPot,
+  Trophy,
+  Film,
+  Languages,
+  Landmark,
+  Scissors,
+  Sparkles,
+
+  Coffee,
+  Leaf,
+  Laptop,
+  Brain,
+} from "lucide-react";
+
+export const categoryIcons = {
+  book: BookOpen,
+  music: Music,
+  camera: Camera,
+  art: Palette,
+  fitness: Dumbbell,
+  cooking: CookingPot,
+  food: Utensils,
+  coding: Code,
+  gaming: Gamepad2,
+  gardening: Flower2,
+  travel: Plane,
+  writing: PenTool,
+  singing: Mic,
+  fashion: Shirt,
+  cycling: Bike,
+  wellness: Heart,
+  diy: Hammer,
+  painting: Brush,
+  guitar: Guitar,
+  sports: Trophy,
+  film: Film,
+  languages: Languages,
+  culture: Landmark,
+  crafts: Scissors,
+  beauty: Sparkles,
+  coffee: Coffee,
+  nature: Leaf,
+  tech: Laptop,
+  mindset: Brain,
+};
+
+export type CategoryIconName = keyof typeof categoryIcons;
+
+export const getCategoryIcon = (icon?: string) => {
+  if (!icon) return categoryIcons.book;
+  return categoryIcons[icon as CategoryIconName] || categoryIcons.book;
+};

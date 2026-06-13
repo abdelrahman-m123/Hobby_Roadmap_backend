@@ -34,7 +34,21 @@ app.use('/api/flashcards', flashcardRoutes);
 // ─── Swagger UI ─────────────────────────────────────────────────────────────
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.get('/api/docs.json', (req, res) => res.json(swaggerSpec));
+app.get("/debug/ip", async (req, res) => {
+  try {
+    const response = await fetch("https://api.ipify.org?format=json");
+    const data = await response.json();
 
+    res.json({
+      outboundIp: data.ip,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to get outbound IP",
+      error: String(error),
+    });
+  }
+});
 // ─── Health Check ─────────────────────────────────────────────────────────────
 /**
  * @openapi

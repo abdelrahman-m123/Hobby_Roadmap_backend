@@ -22,6 +22,13 @@ Hobby Roadmap is a full-stack learning platform for discovering structured hobby
 - Backend: Node.js, Express, MongoDB, Mongoose
 - Auth: JWT with protected and admin-only routes
 - Docs: Swagger UI
+- Deployment: Netlify, Back4App, MongoDB Atlas
+
+## Deployment
+
+- Frontend deployed on Netlify
+- Backend deployed on Back4App
+- Database hosted on MongoDB Atlas
 
 ## Project Structure
 

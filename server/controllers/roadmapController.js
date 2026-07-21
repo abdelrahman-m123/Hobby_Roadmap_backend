@@ -63,7 +63,7 @@ exports.getOne = async (req, res) => {
 // POST /api/roadmaps  [admin]
 exports.create = async (req, res) => {
   try {
-    const { title, slug, description, category, coverImage, difficulty, estimatedTime, tags, stages } = req.body;
+    const { title, slug, description, category, coverImage, difficulty, estimatedTime, tags, stages, isPublished } = req.body;
     const roadmap = await Roadmap.create({
       title,
       slug,
@@ -75,6 +75,7 @@ exports.create = async (req, res) => {
       tags,
       stages: stages || [],
       createdBy: req.user._id,
+      isPublished
     });
     res.status(201).json({ roadmap });
   } catch (err) {
